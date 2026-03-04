@@ -5,7 +5,7 @@ import { useState } from 'react';
 const FAQ_ITEMS = [
   {
     q: 'Are you available for full-time roles?',
-    a: 'Yes — I'm actively looking for a full-time product design position at a US tech company. I'm open to both remote and hybrid roles, with a strong preference for product-led teams where design has real strategic weight.',
+    a: "Yes — I'm actively looking for a full-time product design position at a US tech company. I'm open to both remote and hybrid roles, with a strong preference for product-led teams where design has real strategic weight.",
   },
   {
     q: 'What does your design process look like?',
@@ -17,10 +17,10 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Can you work with a US-based team remotely?',
-    a: 'Absolutely. I'm experienced with async-first collaboration across time zones. I work in Figma, Notion, Linear, and Loom, and I'm flexible with overlap hours for EST, PST, or CST teams.',
+    a: "Absolutely. I'm experienced with async-first collaboration across time zones. I work in Figma, Notion, Linear, and Loom, and I'm flexible with overlap hours for EST, PST, or CST teams.",
   },
   {
-    q: 'How do you see design's role in a product team?',
+    q: "How do you see design's role in a product team?",
     a: 'Design should be a strategic function, not a service layer. That means participating in product decisions early, questioning requirements when needed, and being accountable to outcomes — not just deliverables.',
   },
 ];
