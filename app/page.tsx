@@ -14,20 +14,14 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <div className="page-border page-border--no-min-height">
+      <div className="page-border">
         <main>
           <Hero />
           <LogoStrip />
           <SelectedProjects />
-        </main>
-      </div>
-
-      <div className="what-fullwidth-wrapper">
-        <WhatIDo />
-      </div>
-
-      <div className="page-border page-border--no-min-height">
-        <main>
+          <div className="what-breakout">
+            <WhatIDo />
+          </div>
           <About />
           <TechStack />
           <ProfessionalDevelopment />
