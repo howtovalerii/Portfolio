@@ -1884,17 +1884,19 @@ button {
     height: auto;
     gap: 10px;
     align-items: center;
+    cursor: default;
   }
   .career-logo { width: 80px; height: 80px; }
   .career-name { font-size: 18px; font-weight: 500; line-height: 28px; }
 
-  /* Career labels always visible on mobile, light style */
-  .career-label {
+  /* Mobile labels: absolute, above logo, don't affect layout */
+  .career-label--desktop { display: none !important; }
+  .career-label--mobile {
     display: inline-flex !important;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
     padding: 4px 10px;
     border-radius: 8px;
     background: #F5F5F5;
@@ -1906,7 +1908,7 @@ button {
     white-space: nowrap;
     pointer-events: none;
     animation: none;
-    order: -1;
+    order: 0;
   }
 
   /* ── Final CTA + FAQ ── */
