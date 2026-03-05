@@ -9,7 +9,6 @@ import ProfessionalDevelopment from '@/components/ProfessionalDevelopment';
 import CareerHighlights from '@/components/CareerHighlights';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
-import BottomBlur from '@/components/BottomBlur';
 
 export default function HomePage() {
   return (
@@ -29,7 +28,6 @@ export default function HomePage() {
         </main>
         <Footer />
       </div>
-      <BottomBlur />
     </>
   );
 }
