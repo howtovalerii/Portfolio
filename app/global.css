@@ -1431,20 +1431,29 @@ button {
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
 }
 
-.footer-links a {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.3px;
-  color: #050505;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
+.footer-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #FAFAFA;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
 }
 
-.footer-links a:hover {
-  opacity: 1;
+.footer-social-link:hover {
+  background: #EEEEEE;
+}
+
+.footer-social-link img {
+  width: 20px;
+  height: 20px;
 }
 
 /* ── Responsive ── */
