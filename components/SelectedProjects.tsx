@@ -1,10 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { useRef, useState, useCallback } from 'react';
 
 const PROJECTS = [
   {
     title: 'Forma - AI Generation Model',
     type: 'Web design',
-    image: '/projects/forma-1.png',
+    image: '/projects/forma-1.jpg',
     href: '/projects/forma-1',
   },
   {
@@ -28,12 +31,46 @@ const PROJECTS = [
 ];
 
 function ProjectCard({ project }: { project: typeof PROJECTS[0] }) {
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    setOffset({ x: x * 0.4, y: y * 0.4 });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setHovered(false);
+    setOffset({ x: 0, y: 0 });
+  }, []);
+
   return (
-    <Link href={project.href} className="project-card">
+    <Link
+      ref={cardRef}
+      href={project.href}
+      className="project-card"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="project-card-image">
         <img src={project.image} alt={project.title} />
         <div className="project-card-overlay" aria-hidden="true">
-          <span className="project-card-view-btn">View</span>
+          <span
+            className="project-card-view-btn"
+            style={{
+              transform: hovered
+                ? `translate(calc(-50% + ${offset.x}px), calc(-50% + ${offset.y}px)) scale(1)`
+                : 'translate(-50%, -50%) scale(0.9)',
+            }}
+          >
+            View
+          </span>
         </div>
       </div>
       <div className="project-card-text">
