@@ -3,12 +3,12 @@
 import { useState } from 'react';
 
 const COMPANIES = [
-  { id: 'evoplay',        name: 'Evoplay',        role: 'UX/UI Designer', logo: '/companies/evoplay.jpg' },
-  { id: 'wormhole',       name: 'Wormhole',       role: 'UX Designer',    logo: '/companies/wormhole.jpg' },
-  { id: 'u1core',         name: 'U1CORE',         role: 'Product Designer', logo: '/companies/u1core.jpg' },
-  { id: 'oneclickcrypto', name: 'OneClickCrypto', role: 'Product Designer', logo: '/companies/oneclickcrypto.jpg' },
-  { id: 'solar',          name: 'Solar Ent.',     role: 'Product Designer', logo: '/companies/solar.jpg' },
-  { id: 'theweather',     name: 'TheWeather',     role: 'UX/UI Designer', logo: '/companies/theweather.jpg' },
+  { id: 'evoplay',        name: 'Evoplay',        role: 'UX/UI Designer',   logo: '/companies/logo-1.jpg' },
+  { id: 'wormhole',       name: 'Wormhole',       role: 'UX Designer',      logo: '/companies/logo-2.jpg' },
+  { id: 'u1core',         name: 'U1CORE',         role: 'Product Designer', logo: '/companies/logo-3.jpg' },
+  { id: 'oneclickcrypto', name: 'OneClickCrypto', role: 'Product Designer', logo: '/companies/logo-4.jpg' },
+  { id: 'solar',          name: 'Solar Ent.',     role: 'Product Designer', logo: '/companies/logo-5.jpg' },
+  { id: 'theweather',     name: 'TheWeather',     role: 'UX/UI Designer',   logo: '/companies/logo-6.jpg' },
 ];
 
 export default function CareerHighlights() {
@@ -33,7 +33,7 @@ export default function CareerHighlights() {
               onMouseEnter={() => setHoveredId(company.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              {/* Desktop: show on hover only */}
+              {/* Desktop: show on hover only, light style */}
               {hoveredId === company.id && (
                 <span className="career-label career-label--desktop" role="tooltip">
                   {company.role}
