@@ -3,9 +3,11 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-inner">
 
+        {/* Badge — desktop shows full text, mobile shows short version */}
         <div className="hero-badge">
           <span className="status-dot" aria-hidden="true" />
-          <span>Product Designer · Available for Full-Time (Remote)</span>
+          <span className="hero-badge-desktop">Product Designer · Available for Full-Time (Remote)</span>
+          <span className="hero-badge-mobile">Available for Full-Time (Remote)</span>
         </div>
 
         <div className="hero-headline">
@@ -24,9 +26,17 @@ export default function Hero() {
 
           <div className="hero-buttons">
             <a
-              href="mailto:valera.grigor15@gmail.com?subject=Product%20Design%20Inquiry"
+              href="https://cal.com/"
               className="btn-primary-hero"
             >
+              <img
+                src="/icons/google-meet.svg"
+                alt=""
+                className="btn-icon"
+                aria-hidden="true"
+                width={16}
+                height={16}
+              />
               <span>Book a call</span>
             </a>
             <a
