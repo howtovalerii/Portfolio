@@ -164,17 +164,14 @@ button {
   box-sizing: border-box;
 }
 
-.page-border--no-min-height {
-  min-height: 0;
-}
-
-/* WhatIDo full-width wrapper — breaks out of page-border */
-.what-fullwidth-wrapper {
-  width: 100%;
+/* WhatIDo breakout — escapes page-border using negative margins */
+.what-breakout {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   border-top: 1px solid #DEDEDE;
   border-bottom: 1px solid #DEDEDE;
-  overflow: hidden;
   background: #FFFFFF;
+  overflow: hidden;
 }
 
 /* ── Header ── */
