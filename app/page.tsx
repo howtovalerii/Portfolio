@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <div className="page-border">
+      <div className="page-border page-border--no-min-height">
         <main>
           <Hero />
           <LogoStrip />
@@ -22,12 +22,11 @@ export default function HomePage() {
         </main>
       </div>
 
-      {/* WhatIDo sits outside page-border so its borders span full viewport width */}
       <div className="what-fullwidth-wrapper">
         <WhatIDo />
       </div>
 
-      <div className="page-border">
+      <div className="page-border page-border--no-min-height">
         <main>
           <About />
           <TechStack />
