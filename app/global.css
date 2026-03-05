@@ -711,6 +711,8 @@ button {
   align-items: center;
   align-self: stretch;
   overflow: hidden;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .what-inner {
@@ -756,11 +758,11 @@ button {
   align-items: center;
   gap: 16px;
   width: max-content;
-  animation: marqueeLeft 20s linear infinite;
+  animation: marqueeLeft 35s linear infinite;
 }
 
 .what-marquee-track.marquee-reverse {
-  animation: marqueeRight 24s linear infinite;
+  animation: marqueeRight 42s linear infinite;
 }
 
 @keyframes marqueeLeft {
@@ -779,8 +781,7 @@ button {
   gap: 8px;
   padding: 10px 16px;
   border-radius: 100px;
-  border: 1px solid #DEDEDE;
-  background: #FFFFFF;
+  background: #FAFAFA;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -1756,7 +1757,7 @@ button {
   .projects-grid,
   .education-grid { width: 100%; gap: 32px; }
   .projects-row { flex-direction: column; gap: 32px; }
-  .project-card-image { aspect-ratio: 1 / 1; }
+  .project-card-image { aspect-ratio: 335 / 220; }
 
   /* ── What I Do ── */
   .what-inner { gap: 32px; align-items: flex-start; }
