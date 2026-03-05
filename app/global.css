@@ -1756,7 +1756,7 @@ button {
   .projects-grid,
   .education-grid { width: 100%; gap: 32px; }
   .projects-row { flex-direction: column; gap: 32px; }
-  .project-card-image { aspect-ratio: 335 / 220; }
+  .project-card-image { aspect-ratio: 1 / 1; }
 
   /* ── What I Do ── */
   .what-inner { gap: 32px; align-items: flex-start; }
