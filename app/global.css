@@ -1156,6 +1156,11 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .career-inner {
@@ -1209,7 +1214,7 @@ button {
 
 .career-label {
   position: absolute;
-  bottom: calc(100% - 4px);
+  bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
   display: inline-flex;
@@ -1217,8 +1222,8 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  background: #050505;
-  color: #FFFFFF;
+  background: #F5F5F5;
+  color: #050505;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -1880,7 +1885,7 @@ button {
     gap: 10px;
     align-items: center;
   }
-  .career-logo { width: 120px; height: 120px; }
+  .career-logo { width: 80px; height: 80px; }
   .career-name { font-size: 18px; font-weight: 500; line-height: 28px; }
 
   /* Career labels always visible on mobile, light style */
