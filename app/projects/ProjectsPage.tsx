@@ -7,14 +7,14 @@ import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 
 const ALL_PROJECTS = [
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.png', href: '/projects/forma-1' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-2.png', href: '/projects/forma-2' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-3.png', href: '/projects/forma-3' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-4.png', href: '/projects/forma-4' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.png', href: '/projects/forma-5' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-2.png', href: '/projects/forma-6' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-3.png', href: '/projects/forma-7' },
-  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-4.png', href: '/projects/forma-8' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-1' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-2' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-3' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-4' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-5' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-6' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-7' },
+  { title: 'Forma - AI Generation Model', type: 'Web design', image: '/projects/forma-1.jpg', href: '/projects/forma-8' },
 ];
 
 const INITIAL_COUNT = 6;
