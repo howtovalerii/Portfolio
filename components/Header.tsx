@@ -43,7 +43,9 @@ export default function Header() {
     <>
       <header className="header" role="banner">
         <div className="header-inner">
-          <Identity />
+          <a href="/" onClick={handleHome} className="header-identity-link">
+            <Identity />
+          </a>
 
           <div className="header-right">
             <nav className="header-nav" aria-label="Main navigation">
@@ -76,7 +78,9 @@ export default function Header() {
       {menuOpen && (
         <div className="burger-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
           <div className="burger-menu-header">
-            <Identity />
+            <a href="/" onClick={handleHome} className="header-identity-link">
+              <Identity />
+            </a>
             <button
               className="burger-menu-close"
               aria-label="Close menu"
