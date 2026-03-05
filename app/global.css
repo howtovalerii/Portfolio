@@ -476,26 +476,28 @@ button {
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
-  padding: 40px 0;
+  padding: 32px 0;
   border-top: 1px solid #DEDEDE;
   border-bottom: 1px solid #DEDEDE;
 }
 
 .logo-strip-mask {
-  width: 100%;
+  width: 1040px;
+  max-width: 1040px;
+  margin: 0 auto;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(
     90deg,
     rgba(0,0,0,0) 0%,
-    #000 10%,
-    #000 90%,
+    #000 8%,
+    #000 92%,
     rgba(0,0,0,0) 100%
   );
   mask-image: linear-gradient(
     90deg,
     rgba(0,0,0,0) 0%,
-    #000 10%,
-    #000 90%,
+    #000 8%,
+    #000 92%,
     rgba(0,0,0,0) 100%
   );
 }
@@ -1890,7 +1892,11 @@ button {
   .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
 
   /* ── Logo Strip ── */
-  .logo-strip { padding: 28px 0; }
+  .logo-strip { padding: 24px 0; }
+  .logo-strip-mask {
+    width: 335px;
+    max-width: 335px;
+  }
   .logo-strip-track { gap: 40px; }
   .logo-strip-item { height: 24px; }
 
