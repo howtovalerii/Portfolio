@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -13,10 +16,14 @@ export default function Header() {
 
   const close = () => setMenuOpen(false);
 
-  const scrollToTop = (e: React.MouseEvent) => {
+  const handleHome = (e: React.MouseEvent) => {
     e.preventDefault();
     close();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      router.push('/');
+    }
   };
 
   const Identity = () => (
@@ -40,7 +47,7 @@ export default function Header() {
 
           <div className="header-right">
             <nav className="header-nav" aria-label="Main navigation">
-              <a href="/" onClick={scrollToTop}>Home</a>
+              <a href="/" onClick={handleHome}>Home</a>
               <Link href="/projects">Projects</Link>
               <Link href="/resume">Resume</Link>
             </nav>
@@ -80,7 +87,7 @@ export default function Header() {
           </div>
 
           <nav className="burger-menu-links" aria-label="Mobile navigation">
-            <a href="/" onClick={scrollToTop}>Home</a>
+            <a href="/" onClick={handleHome}>Home</a>
             <Link href="/projects" onClick={close}>Projects</Link>
             <Link href="/resume"   onClick={close}>Resume</Link>
           </nav>
