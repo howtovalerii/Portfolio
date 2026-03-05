@@ -13,6 +13,12 @@ export default function Header() {
 
   const close = () => setMenuOpen(false);
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    close();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const Identity = () => (
     <div className="header-identity">
       <img src="/avatar.jpg" alt="Valerii Hryhoriev" className="header-avatar" />
@@ -34,7 +40,7 @@ export default function Header() {
 
           <div className="header-right">
             <nav className="header-nav" aria-label="Main navigation">
-              <Link href="/">Home</Link>
+              <a href="/" onClick={scrollToTop}>Home</a>
               <Link href="/projects">Projects</Link>
               <Link href="/resume">Resume</Link>
             </nav>
@@ -74,7 +80,7 @@ export default function Header() {
           </div>
 
           <nav className="burger-menu-links" aria-label="Mobile navigation">
-            <Link href="/"         onClick={close}>Home</Link>
+            <a href="/" onClick={scrollToTop}>Home</a>
             <Link href="/projects" onClick={close}>Projects</Link>
             <Link href="/resume"   onClick={close}>Resume</Link>
           </nav>
