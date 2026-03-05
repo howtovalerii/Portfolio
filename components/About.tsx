@@ -28,7 +28,7 @@ export default function About() {
                 className="about-social-link"
                 aria-label={link.label}
               >
-                <img src={link.icon} alt="" aria-hidden="true" width={20} height={20} />
+                <img src={link.icon} alt="" aria-hidden="true" width={24} height={24} />
               </a>
             ))}
           </div>
@@ -45,6 +45,7 @@ export default function About() {
             href="mailto:valera.grigor15@gmail.com?subject=Product%20Design%20Inquiry"
             className="btn-primary-hero about-btn"
           >
+            <img src="/icons/google-meet.svg" alt="" aria-hidden="true" width={20} height={20} />
             <span>Work with me</span>
           </a>
         </div>
