@@ -1048,6 +1048,11 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .education-inner {
@@ -1076,7 +1081,6 @@ button {
 }
 
 .education-card-image {
-  aspect-ratio: 483 / 340;
   border-radius: 12px;
   overflow: hidden;
   background-color: #F0F4F8;
@@ -1084,7 +1088,8 @@ button {
 
 .education-card-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   object-position: top;
   transition: none;
