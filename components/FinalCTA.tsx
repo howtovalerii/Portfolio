@@ -42,10 +42,11 @@ export default function FinalCTA() {
         <div className="final-cta-left">
           <div className="hero-badge">
             <span className="status-dot" aria-hidden="true" />
-            <span>Product Designer · Available for Full-Time (Remote)</span>
+            <span className="cta-badge-desktop">Product Designer · Available for Full-Time (Remote)</span>
+            <span className="cta-badge-mobile">Available for Full-Time (Remote)</span>
           </div>
 
-          <h2 className="final-cta-title" id="cta-heading">
+          <h2 className="projects-title final-cta-title" id="cta-heading">
             Looking for a strategic product design partner?
           </h2>
 
@@ -55,9 +56,10 @@ export default function FinalCTA() {
 
           <div className="hero-buttons">
             <a
-              href="mailto:valera.grigor15@gmail.com?subject=Product%20Design%20Inquiry"
+              href="https://cal.com/"
               className="btn-primary-hero"
             >
+              <img src="/icons/google-meet.svg" alt="" aria-hidden="true" width={20} height={20} />
               <span>Book a call</span>
             </a>
             <a
@@ -72,16 +74,14 @@ export default function FinalCTA() {
         {/* Right: FAQ accordion */}
         <div className="final-faq" aria-label="Frequently asked questions">
           {FAQS.map((faq, i) => (
-            <div key={i} className="faq-item">
+            <div key={i} className={`faq-item${openIndex === i ? ' faq-item--open' : ''}`}>
               <button
                 className="faq-trigger"
                 onClick={() => toggle(i)}
                 aria-expanded={openIndex === i}
               >
                 <span className="faq-question">{faq.q}</span>
-                <span className={`faq-icon${openIndex === i ? ' faq-icon--open' : ''}`} aria-hidden="true">
-                  {openIndex === i ? '×' : '+'}
-                </span>
+                <span className="faq-icon" aria-hidden="true">+</span>
               </button>
               {openIndex === i && (
                 <div className="faq-answer">
