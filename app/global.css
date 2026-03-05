@@ -1756,14 +1756,14 @@ button {
 
   /* ── Selected Projects ── */
   .projects-inner,
-  .education-inner { gap: 32px; }
+  .education-inner { gap: 64px; }
   .projects-grid,
   .education-grid { width: 100%; gap: 32px; }
   .projects-row { flex-direction: column; gap: 32px; }
   .project-card-image { aspect-ratio: 335 / 220; }
 
   /* ── What I Do ── */
-  .what-inner { gap: 32px; align-items: flex-start; }
+  .what-inner { gap: 64px; align-items: flex-start; }
   .what-rows { width: 100%; max-width: 100%; }
   .what-marquee-mask { width: 100%; }
 
@@ -1781,7 +1781,7 @@ button {
   .about-btn { width: 100%; align-self: stretch; }
 
   /* ── Tech Stack ── */
-  .tech-inner { gap: 32px; align-items: flex-start; }
+  .tech-inner { gap: 64px; align-items: flex-start; }
   .tech-content { width: 100%; max-width: 100%; gap: 16px; }
   .tech-row {
     width: 100%;
@@ -1834,7 +1834,7 @@ button {
   .education-load-more-row { width: 100%; }
 
   /* ── Career ── */
-  .career-inner { gap: 32px; align-items: flex-start; }
+  .career-inner { gap: 64px; align-items: flex-start; }
   .career-companies {
     width: 100%;
     height: auto;
