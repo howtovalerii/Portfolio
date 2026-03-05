@@ -152,25 +152,6 @@ button {
 
 /* ── Bottom blur ── */
 
-.bottom-blur {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 110px;
-  pointer-events: none;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  mask-image: linear-gradient(to top, black 40%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, black 40%, transparent 100%);
-  opacity: 0;
-  transition: opacity 300ms ease-out;
-}
-
-.bottom-blur.visible {
-  opacity: 1;
-}
 
 /* ── Page Border Frame ── */
 
@@ -203,10 +184,7 @@ button {
 }
 
 .header-inner {
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 80px;
+  width: 1040px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -493,7 +471,10 @@ button {
 /* ── Logo Strip ── */
 
 .logo-strip {
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   padding: 40px 0;
   border-top: 1px solid #DEDEDE;
