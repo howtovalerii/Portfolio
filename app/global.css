@@ -204,8 +204,9 @@ button {
 
 .header-inner {
   width: 100%;
-  max-width: 1440px;
-  padding: 20px 80px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -338,7 +339,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
   width: 100%;
 }
 
@@ -352,13 +353,15 @@ button {
   background: #F7F7F7;
 }
 
-.hero-badge span:last-child {
+.hero-badge-desktop {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
   letter-spacing: -0.3px;
   color: #050505;
 }
+
+.hero-badge-mobile { display: none; }
 
 .status-dot {
   width: 8px;
@@ -417,6 +420,7 @@ button {
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -0.5px;
+  opacity: 0.7;
 }
 
 .hero-buttons {
@@ -454,21 +458,32 @@ button {
   opacity: 0.85;
 }
 
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+}
+
 .btn-secondary-hero {
   display: flex;
   width: 140px;
   height: 48px;
-  padding: 12px 27px;
   justify-content: center;
   align-items: center;
   border-radius: 180px;
   background: #EEEEEE;
   color: #050505;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.3px;
   white-space: nowrap;
   transition: background-color 0.15s ease;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
 }
 
 .btn-secondary-hero:hover {
@@ -1687,10 +1702,11 @@ button {
 
   /* ── Hero ── */
   .hero {
-    padding: 120px 20px 60px;
+    padding: 160px 20px 64px;
+    gap: 32px;
   }
-  .hero-inner { gap: 20px; align-items: flex-start; }
-  .hero-headline { gap: 20px; align-items: flex-start; }
+  .hero-inner { gap: 32px; align-items: flex-start; }
+  .hero-headline { gap: 24px; align-items: flex-start; }
   .hero-title-wrap { width: 100%; }
   .hero-title {
     font-size: 48px;
@@ -1705,10 +1721,32 @@ button {
     font-weight: 500;
     letter-spacing: -0.5px;
     text-align: left;
+    opacity: 0.7;
   }
-  .hero-buttons { flex-direction: column; width: 100%; gap: 10px; }
-  .btn-primary-hero { width: 100%; height: 52px; min-width: unset; }
-  .btn-secondary-hero { width: 100%; height: 52px; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+  .btn-primary-hero { width: 100%; height: 48px; min-width: unset; }
+  .btn-secondary-hero {
+    width: 100%;
+    height: 48px;
+    background: #EEEEEE;
+    box-shadow: none;
+    border: none;
+    -webkit-appearance: none;
+  }
+  /* Badge: hide desktop text, show mobile text */
+  .hero-badge-desktop { display: none; }
+  .hero-badge-mobile {
+    display: inline;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: #050505;
+  }
+  /* Logo strip mobile */
+  .logo-strip { padding: 24px 0; }
+  .logo-strip-track { gap: 40px; }
+  .logo-strip-item { height: 24px; }
 
   /* ── Section shared padding ── */
   .section-projects,
