@@ -1330,15 +1330,14 @@ button {
 }
 
 .faq-item {
-  border: 1px solid #EEEEEE;
   border-radius: 16px;
   overflow: hidden;
-  background: #FFFFFF;
-  transition: border-color 0.15s ease;
+  background: #FAFAFA;
+  transition: background-color 0.15s ease;
 }
 
 .faq-item--open {
-  border-color: #DEDEDE;
+  background: #FAFAFA;
 }
 
 .faq-trigger {
@@ -1389,7 +1388,7 @@ button {
 }
 
 .faq-answer {
-  padding: 0 20px 16px;
+  padding: 8px 20px 16px;
   animation: faqOpen 0.2s ease;
 }
 
