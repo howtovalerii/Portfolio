@@ -53,7 +53,7 @@ export default function ProjectsPage() {
       <Header />
       <div className="page-border">
         <main>
-          <section className="section-projects" aria-labelledby="all-projects-heading">
+          <section className="section-projects section-projects--page" aria-labelledby="all-projects-heading">
             <div className="projects-inner">
 
               <div className="projects-header">
