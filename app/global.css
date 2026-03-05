@@ -1247,8 +1247,10 @@ button {
 /* Mobile label variant — hidden on desktop */
 .career-label--mobile { display: none; }
 
-.career-logo-wrap {
-  display: contents;
+.header-identity-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
 }
 
 .career-logo {
