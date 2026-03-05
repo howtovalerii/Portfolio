@@ -28,7 +28,7 @@ export default function About() {
                 className="about-social-link"
                 aria-label={link.label}
               >
-                <img src={link.icon} alt="" aria-hidden="true" width={32} height={32} />
+                <img src={link.icon} alt="" aria-hidden="true" width={24} height={24} />
               </a>
             ))}
           </div>
