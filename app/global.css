@@ -164,6 +164,10 @@ button {
   box-sizing: border-box;
 }
 
+.page-border--no-min-height {
+  min-height: 0;
+}
+
 /* WhatIDo full-width wrapper — breaks out of page-border */
 .what-fullwidth-wrapper {
   width: 100%;
