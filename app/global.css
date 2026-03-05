@@ -1090,8 +1090,6 @@ button {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  object-position: top;
   transition: none;
 }
 
@@ -1112,10 +1110,9 @@ button {
   font-weight: 600;
   line-height: 28px;
   letter-spacing: -0.5px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .education-load-more-row {
@@ -1856,6 +1853,15 @@ button {
   /* ── Education ── */
   .education-card-placeholder { display: none; }
   .education-load-more-row { width: 100%; }
+  .education-card-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
   /* ── Career ── */
   .career-inner { gap: 64px; align-items: flex-start; }
