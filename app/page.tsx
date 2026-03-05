@@ -19,7 +19,16 @@ export default function HomePage() {
           <Hero />
           <LogoStrip />
           <SelectedProjects />
-          <WhatIDo />
+        </main>
+      </div>
+
+      {/* WhatIDo sits outside page-border so its borders span full viewport width */}
+      <div className="what-fullwidth-wrapper">
+        <WhatIDo />
+      </div>
+
+      <div className="page-border">
+        <main>
           <About />
           <TechStack />
           <ProfessionalDevelopment />
