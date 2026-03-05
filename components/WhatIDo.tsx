@@ -48,9 +48,6 @@ function MarqueeRow({
 export default function WhatIDo() {
   return (
     <section className="section-what" aria-labelledby="what-heading">
-      {/* HorizontalBorder — full width, 1px stroke top and bottom */}
-      <div className="what-horizontal-border" aria-hidden="true" />
-
       <div className="what-inner">
         <div className="projects-header">
           <span className="section-label">What I do</span>
