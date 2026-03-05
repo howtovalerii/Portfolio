@@ -1237,6 +1237,10 @@ button {
 /* Mobile label variant — hidden on desktop */
 .career-label--mobile { display: none; }
 
+.career-logo-wrap {
+  display: contents;
+}
+
 .career-logo {
   width: 80px;
   height: 80px;
@@ -1894,18 +1898,25 @@ button {
     gap: 10px;
     align-items: center;
     cursor: default;
+    position: static;
+    padding-top: 0;
+  }
+  .career-logo-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 36px;
   }
   .career-logo { width: 80px; height: 80px; }
   .career-name { font-size: 18px; font-weight: 500; line-height: 28px; }
 
-  /* Mobile labels: absolute above logo, 8px gap, don't affect layout */
+  /* Mobile labels: absolute above logo-wrap, 8px gap, no effect on layout */
   .career-label--desktop { display: none !important; }
   .career-label--mobile {
     display: inline-flex !important;
     position: absolute;
-    top: 0;
+    bottom: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
     padding: 4px 10px;
