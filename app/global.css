@@ -811,6 +811,11 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .about-container {
@@ -833,7 +838,7 @@ button {
 .about-content-top {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
@@ -865,8 +870,8 @@ button {
 }
 
 .about-social-link img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .about-subtitle {
