@@ -711,7 +711,19 @@ button {
   align-items: center;
   align-self: stretch;
   overflow: hidden;
-  box-shadow: 0 1px 0 0 #E8E8E8 inset, 0 -1px 0 0 #E8E8E8 inset;
+  position: relative;
+}
+
+.what-horizontal-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .what-inner {
