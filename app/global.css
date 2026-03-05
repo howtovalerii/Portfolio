@@ -710,7 +710,6 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  overflow: hidden;
   position: relative;
 }
 
