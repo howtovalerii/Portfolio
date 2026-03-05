@@ -13,7 +13,7 @@ export default function About() {
         <div className="about-text">
           <div className="about-content-top">
             <span className="section-label">About</span>
-            <h2 className="projects-title" id="about-heading" style={{ textAlign: 'left' }}>
+            <h2 className="projects-title" id="about-heading">
               Hi, I am<br />Valerii Hryhoriev
             </h2>
           </div>
@@ -28,7 +28,7 @@ export default function About() {
                 className="about-social-link"
                 aria-label={link.label}
               >
-                <img src={link.icon} alt="" aria-hidden="true" width={24} height={24} />
+                <img src={link.icon} alt="" aria-hidden="true" width={32} height={32} />
               </a>
             ))}
           </div>
