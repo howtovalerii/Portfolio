@@ -870,8 +870,13 @@ button {
 }
 
 .about-social-link img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+}
+
+.about-content-top .projects-title {
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .about-subtitle {
