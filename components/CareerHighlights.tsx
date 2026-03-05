@@ -39,14 +39,17 @@ export default function CareerHighlights() {
                   {company.role}
                 </span>
               )}
-              {/* Mobile: always visible, absolutely positioned */}
-              <span className="career-label career-label--mobile" aria-hidden="true">
-                {company.role}
-              </span>
 
-              <div className="career-logo">
-                <img src={company.logo} alt={company.name} />
+              {/* Logo wrapper — mobile label anchors to this */}
+              <div className="career-logo-wrap">
+                <span className="career-label career-label--mobile" aria-hidden="true">
+                  {company.role}
+                </span>
+                <div className="career-logo">
+                  <img src={company.logo} alt={company.name} />
+                </div>
               </div>
+
               <span className="career-name">{company.name}</span>
             </div>
           ))}
