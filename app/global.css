@@ -923,6 +923,11 @@ button {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .tech-inner {
@@ -943,6 +948,9 @@ button {
   gap: 16px;
 }
 
+.tech-content--desktop { display: flex; }
+.tech-content--mobile  { display: none; }
+
 .tech-row {
   display: flex;
   width: 740px;
@@ -962,7 +970,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  cursor: pointer;
+  cursor: default;
   transition: background-color 0.2s ease;
 }
 
@@ -985,8 +993,6 @@ button {
 }
 
 .tech-logo-img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
   transition: filter 0.2s ease;
 }
@@ -1014,19 +1020,20 @@ button {
   white-space: nowrap;
   pointer-events: none;
   z-index: 10;
+}
+
+/* Desktop: hidden by default, shown on hover */
+.tech-label--desktop { display: none; }
+.tech-label--desktop.tech-label--visible {
+  display: inline-flex;
   animation: labelFadeIn 0.15s ease;
 }
 
-/* Mobile label — hidden on desktop */
-.tech-label--mobile { display: none; }
+/* Mobile: hidden by default, shown when tapped (conditional render) */
+.tech-label--mobile { display: inline-flex; }
 
-.tech-label--top {
-  bottom: calc(100% + 10px);
-}
-
-.tech-label--bottom {
-  top: calc(100% + 10px);
-}
+.tech-label--top    { bottom: calc(100% + 10px); }
+.tech-label--bottom { top: calc(100% + 10px); }
 
 @keyframes labelFadeIn {
   from { opacity: 0; transform: translateX(-50%) translateY(4px); }
@@ -1792,25 +1799,28 @@ button {
 
   /* ── Tech Stack ── */
   .tech-inner { gap: 64px; align-items: flex-start; }
-  .tech-content { width: 100%; max-width: 100%; gap: 16px; }
-  .tech-row {
-    width: 100%;
-    height: auto;
+  .tech-content--desktop { display: none; }
+  .tech-content--mobile  { display: flex; width: 100%; }
+
+  .tech-grid-mobile {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px 12px;
+    width: 100%;
     justify-items: center;
   }
-  .tech-spacer { display: none; }
 
-  /* Desktop labels off, mobile labels always on */
+  /* Desktop labels off on mobile */
   .tech-label--desktop { display: none !important; }
+
+  /* Mobile label: shown only when active (conditional render), position absolute */
   .tech-label--mobile {
-    display: inline-flex !important;
+    display: inline-flex;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc(100% + 8px);
+    top: calc(100% + 8px);
+    bottom: auto;
     padding: 2px 6px;
     border-radius: 6px;
     background: #050505;
@@ -1821,8 +1831,7 @@ button {
     letter-spacing: -0.2px;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 1;
-    animation: none;
+    z-index: 10;
   }
 
   .tech-item {
@@ -1830,7 +1839,6 @@ button {
     height: 72px;
     border-radius: 50%;
     justify-self: center;
-    margin-top: 32px;
     position: relative;
     cursor: pointer;
   }
