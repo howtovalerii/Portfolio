@@ -551,7 +551,7 @@ button {
 }
 
 .section-projects--page {
-  padding: 170px 0 0;
+  padding: 170px 0 120px;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -1805,6 +1805,7 @@ button {
     position: static;
     left: auto;
     transform: none;
+    border-bottom: 1px solid #DEDEDE;
   }
   .projects-header { align-items: flex-start; }
   .projects-title {
