@@ -5,8 +5,12 @@ import './global.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Valera Grigor — Strategic Product Designer',
+  title: 'Valerii Hryhoriev — Strategic Product Designer',
   description: 'Strategic product designer focused on systems, structure, and clarity. Seeking full-time roles at US tech companies.',
+  icons: {
+    icon: '/avatar.jpg',
+    apple: '/avatar.jpg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
