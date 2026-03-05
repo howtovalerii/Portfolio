@@ -170,6 +170,7 @@ button {
   border-top: 1px solid #DEDEDE;
   border-bottom: 1px solid #DEDEDE;
   overflow: hidden;
+  background: #FFFFFF;
 }
 
 /* ── Header ── */
