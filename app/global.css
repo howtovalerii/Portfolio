@@ -1781,10 +1781,10 @@ button {
     letter-spacing: -2.5px;
     text-align: left;
   }
-  /* What I Do heading stays centered on mobile */
+  /* What I Do heading left-aligned on mobile */
   .what-inner .projects-title {
-    text-align: center;
-    align-self: center;
+    text-align: left;
+    align-self: flex-start;
   }
 
   /* ── Selected Projects ── */
@@ -1894,17 +1894,18 @@ button {
     gap: 10px;
     align-items: center;
     cursor: default;
+    position: relative;
     padding-top: 36px;
   }
   .career-logo { width: 80px; height: 80px; }
   .career-name { font-size: 18px; font-weight: 500; line-height: 28px; }
 
-  /* Mobile labels: absolute, above logo, don't affect layout */
+  /* Mobile labels: absolute above logo, 8px gap, don't affect layout */
   .career-label--desktop { display: none !important; }
   .career-label--mobile {
     display: inline-flex !important;
     position: absolute;
-    bottom: calc(100% + 8px);
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     padding: 4px 10px;
@@ -1918,7 +1919,6 @@ button {
     white-space: nowrap;
     pointer-events: none;
     animation: none;
-    order: 0;
   }
 
   /* ── Final CTA + FAQ ── */
