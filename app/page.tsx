@@ -19,9 +19,7 @@ export default function HomePage() {
           <Hero />
           <LogoStrip />
           <SelectedProjects />
-          <div className="what-breakout">
-            <WhatIDo />
-          </div>
+          <WhatIDo />
           <About />
           <TechStack />
           <ProfessionalDevelopment />
